@@ -24,12 +24,18 @@ class Lawyer(Base):
 
 
 class User(Base):
-	__tablename__='lawyers'
+	__tablename__='user'
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
 	email = Column(String)
 	password = Column(String)
 
+class Laws(Base):
+	__tablename__ ='laws'
+	id = Column(Integer, primary_key=True)
+	law_title = Column(String)
+	contents = Column(String)
+	
 
 
 
