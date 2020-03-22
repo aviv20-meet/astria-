@@ -7,7 +7,7 @@ app.secret_key = "MY_SUPER_SECRET_KEY"
 
 @app.route("/")
 def home():
-	return render_template("index.html")
+	return render_template("home.html")
 
 @app.route("/lawyers")
 def lawyers():
@@ -15,7 +15,7 @@ def lawyers():
 
 @app.route("/rights")
 def rights():
-	return render_template("index.html")
+	return render_template("rights.html")
 @app.route("/index")
 def index():
 	return render_template("index.html")
