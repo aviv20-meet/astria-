@@ -7,16 +7,18 @@ app.secret_key = "MY_SUPER_SECRET_KEY"
 
 @app.route("/")
 def home():
-	return url_for("home.html")
+	return render_template("index.html")
 
 @app.route("/lawyers")
 def lawyers():
-	return url_for("lawyers.html")
+	return render_template("index.html")
 
 @app.route("/rights")
 def rights():
-	return url_for("rights.html")
-
+	return render_template("index.html")
+@app.route("/index")
+def index():
+	return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
