@@ -12,6 +12,8 @@ experience
 education
 '''
 
+Base = declarative_base()
+
 class Lawyer(Base):
 	__tablename__='lawyers'
 	id = Column(Integer, primary_key=True)
@@ -35,8 +37,12 @@ class Laws(Base):
 	id = Column(Integer, primary_key=True)
 	law_title = Column(String)
 	contents = Column(String)
-	
+
+class Rights(Base):
+	__tablename__ = 'rights'
+	id = Column(Integer, primary_key=True)
+	right_title = Column(String)
+	contents = Column(String)
 
 
 
-Base = declarative_base()

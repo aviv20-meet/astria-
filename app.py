@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect, url_for, render_template
 from flask import session as login_session
+from databases import get_all_rights, get_all_laws , get_all_lawyers
 
 app = Flask(__name__)
 app.secret_key = "MY_SUPER_SECRET_KEY"
@@ -11,13 +12,21 @@ def home():
 
 @app.route("/lawyers")
 def lawyers():
-	return render_template("index.html")
+	lawyers = get_all_lawyers()
+	return render_template("lawyers.html", lawyers = lawyers)
 
 @app.route("/rights")
 def rights():
-	return render_template("rights.html")
+	rights = get_all_rights()
+	laws = get_all_laws()
+	return render_template("rights.html",rights = rights,laws = laws)
+
 @app.route("/index")
 def index():
+	return render_template("index.html")
+
+@app.route("/about")
+def about():
 	return render_template("index.html")
 
 if __name__ == '__main__':
