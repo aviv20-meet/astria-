@@ -1,4 +1,4 @@
-from model import Base, User, Lawyer, Laws, Rights
+from model import Base, User, Lawyer, Law, Right
 
 
 from sqlalchemy import create_engine
@@ -22,7 +22,7 @@ def make_session():
 	return session
 
 def add_user(name, email, password):
-	session = make_session()
+
 	new_user = User(
 		name = name, 
 		email = email, 
@@ -30,8 +30,22 @@ def add_user(name, email, password):
 	session.add(new_user)
 	session.commit()
 
+def add_law(title, content):
+	new_law = Law(
+		law_title=title,
+		contents=content)
+	session.add(new_law)
+	session.commit()
+
+def add_right(title, content):
+	new_right = Right(
+		right_title=title,
+		contents=content)
+	session.add(new_right)
+	session.commit()
+
 def add_lawyer(name, profession, specialty):
-	session = make_session()
+
 	new_lawyer = Lawyer(
 		name = name, 
 		specialty= specialty, 
@@ -43,19 +57,21 @@ def add_lawyer(name, profession, specialty):
 	session.commit()
 
 def get_all_laws():
-	session = make_session()
-	laws = session.query(Laws).all()
+
+	laws = session.query(Law).all()
 	return laws
 
 def get_all_rights():
-	session = make_session()
-	rights = session.query(Rights).all()
+
+	rights = session.query(Right).all()
 	return rights
 	
 def get_all_lawyers():
-	session = make_session()
+
 	lawyers = session.query(Lawyer).all()
 
 	return lawyers
 
 add_lawyer("john doe"," " , "mediator")
+add_right("hii", "hello")
+print(get_all_rights())

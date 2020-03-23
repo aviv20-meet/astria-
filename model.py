@@ -32,13 +32,13 @@ class User(Base):
 	email = Column(String)
 	password = Column(String)
 
-class Laws(Base):
+class Law(Base):
 	__tablename__ ='laws'
 	id = Column(Integer, primary_key=True)
 	law_title = Column(String)
 	contents = Column(String)
 
-class Rights(Base):
+class Right(Base):
 	__tablename__ = 'rights'
 	id = Column(Integer, primary_key=True)
 	right_title = Column(String)

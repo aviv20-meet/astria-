@@ -46,7 +46,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{url_for('lawyers')}}">Legal Personal</a><!--add in herf image-->
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{url_for('about')}}">About</a><!--add in herf image-->
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a><!--add in herf image-->
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a><!--add in herf image-->
@@ -101,9 +101,9 @@
 
         <!-- Portfolio Item 1 -->
         <!-- About Section Content -->
-      {%for rights in right %}
+      {%for right in rights %}
       <div class="row">
-      	<h1>{{right.name}}</h1>
+      	<h1>{{right.right_title}}</h1>
         <div class="col-lg-4 ml-auto">
           <p class="lead">{{right.contents}}</p>
         </div>
@@ -132,14 +132,15 @@
       </div>
 
       <!-- About Section Content -->
-      {%for laws in law %}
+      {%for law in laws %}
       <div class="row">
-      	<h1>{{law.name}}</h1>
+      	<h1>{{law.law_title}}</h1>
         <div class="col-lg-4 ml-auto">
           <p class="lead">{{law.contents}}</p>
         </div>
       </div>
       {% endfor %}
+    
   </section>
 
   <!-- Contact Section -->
