@@ -74,4 +74,4 @@ def get_all_lawyers():
 
 add_lawyer("john doe"," " , "mediator")
 add_right("hii", "hello")
-print(get_all_rights())
+get_all_rights()

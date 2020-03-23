@@ -1,6 +1,6 @@
 from flask import Flask, request, redirect, url_for, render_template
 from flask import session as login_session
-from databases import get_all_rights, get_all_laws , get_all_lawyers
+from databases import *
 
 app = Flask(__name__)
 app.secret_key = "MY_SUPER_SECRET_KEY"
