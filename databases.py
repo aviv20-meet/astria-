@@ -22,7 +22,7 @@ def make_session():
 	return session
 
 def add_user(name, email, password):
-
+	make_session()
 	new_user = User(
 		name = name, 
 		email = email, 
@@ -31,6 +31,7 @@ def add_user(name, email, password):
 	session.commit()
 
 def add_law(title, content):
+	make_session()
 	new_law = Law(
 		law_title=title,
 		contents=content)
@@ -38,6 +39,7 @@ def add_law(title, content):
 	session.commit()
 
 def add_right(title, content):
+	make_session()
 	new_right = Right(
 		right_title=title,
 		contents=content)
@@ -45,7 +47,7 @@ def add_right(title, content):
 	session.commit()
 
 def add_lawyer(name, profession, specialty):
-
+	make_session()
 	new_lawyer = Lawyer(
 		name = name, 
 		specialty= specialty, 
@@ -57,17 +59,17 @@ def add_lawyer(name, profession, specialty):
 	session.commit()
 
 def get_all_laws():
-
+	make_session()
 	laws = session.query(Law).all()
 	return laws
 
 def get_all_rights():
-
+	make_session()
 	rights = session.query(Right).all()
 	return rights
 	
 def get_all_lawyers():
-
+	make_session()
 	lawyers = session.query(Lawyer).all()
 
 	return lawyers
