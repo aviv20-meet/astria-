@@ -18,8 +18,8 @@ class Lawyer(Base):
 	__tablename__='lawyers'
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
-	profession = Column(String)#lawyer or mediator
-	specielty = Column(String)
+	specialty =Column(String)
+	profession = Column(String)
 	education = Column(String)
 	experience = Column(String)
 	location = Column(String)

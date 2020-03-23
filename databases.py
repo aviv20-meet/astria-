@@ -5,6 +5,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
+engine = create_engine('sqlite:///astria.db')
+Base.metadata.create_all(engine)
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
+
+
+
+
 # replace lecture.db with your own database file
 def make_session():
 	engine = create_engine('sqlite:///database.db')
@@ -24,14 +32,14 @@ def add_user(name, email, password):
 
 def add_lawyer(name, profession, specialty):
 	session = make_session()
-	new_user = User(
+	new_lawyer = Lawyer(
 		name = name, 
-		profession = profession, 
-		specielty = specielty, 
-		education = education, 
-		experience = experience, 
-		location =location)
-	session.add(new_user)
+		specialty= specialty, 
+		profession = profession,
+		education = "", 
+		experience = "", 
+		location ="")
+	session.add(new_lawyer)
 	session.commit()
 
 def get_all_laws():
@@ -49,3 +57,5 @@ def get_all_lawyers():
 	lawyers = session.query(Lawyer).all()
 
 	return lawyers
+
+add_lawyer("john doe"," " , "mediator")
