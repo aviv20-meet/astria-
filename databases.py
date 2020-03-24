@@ -19,7 +19,7 @@ def make_session():
 	Base.metadata.create_all(engine)
 	DBSession = sessionmaker(bind=engine)
 	session = DBSession()
-	return session
+	# return session
 
 def add_user(name, email, password):
 	make_session()
@@ -74,6 +74,6 @@ def get_all_lawyers():
 
 	return lawyers
 
-add_lawyer("john doe"," " , "mediator")
-add_right("hii", "hello")
-get_all_rights()
+# add_lawyer("john doe"," " , "mediator")
+# add_right("hii", "hello")
+# get_all_rights()

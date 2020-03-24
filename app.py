@@ -12,14 +12,14 @@ def home():
 
 @app.route("/lawyers")
 def lawyers():
-	lawyers = get_all_lawyers()
-	return render_template("lawyers.html", lawyers = lawyers)
+	# lawyers = get_all_lawyers()
+	return render_template("lawyers.html")
 
 @app.route("/rights")
 def rights():
-	rights = get_all_rights()
-	laws = get_all_laws()
-	return render_template("rights.html",rights = rights,laws = laws)
+	# rights = get_all_rights()
+	# laws = get_all_laws()
+	return render_template("rights.html")
 
 @app.route("/index")
 def index():

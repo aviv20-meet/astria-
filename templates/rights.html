@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Freelancer - Start Bootstrap Theme</title>
+  <title>ASTRIA - Laws&Rights</title>
 
   <!-- Custom fonts for this theme -->
   <link href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -75,7 +75,7 @@
       </div>
 
       <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+      <p class="masthead-subheading font-weight-light mb-0">Rights - Laws</p>
 
     </div>
   </header>
@@ -99,24 +99,39 @@
       <!-- Portfolio Grid Items -->
       <div class="row">
 
-        <!-- Portfolio Item 1 -->
-        <!-- About Section Content -->
-      {%for right in rights %}
-      <div class="row">
-      	<h1>{{right.right_title}}</h1>
-        <div class="col-lg-4 ml-auto">
-          <p class="lead">{{right.contents}}</p>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">The right to equality</h5>
+            <p class="card-text"> Part of the basic human rights given to everyone.Each person's right to be seen and protected equaly by the law</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
         </div>
       </div>
-      {% endfor %}
-        <!-- Portfolio Item 2 -->
-        <!-- About Section Content -->
+
+          <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">The right to freedom</h5>
+            <p class="card-text"> Part of the basic human rights given to everyone.Each person's right to do as he/she wishes as long as it doesn't harm any other person's rights or is illegal. Includes:freedom of speach, freedom of movemen and more</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+
+       <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">The right to dignity</h5>
+            <p class="card-text"> Part of the basic human rights given to everyone.Each person's right to be treated with dignity and not be humiliated. Includes: the  right to privacy and more</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+ 
+
+</div>
+
       
     </div>
   </section>
 
   <!-- About Section -->
-  <section class="page-section bg-primary text-white mb-0" id="about">
+  <section class="page-section bg-primary mb-0" id="about">
     <div class="container">
 
       <!-- About Section Heading -->
@@ -131,16 +146,76 @@
         <div class="divider-custom-line"></div>
       </div>
 
+
+      <div class = "row">
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">The human dignity and liberty law</h5>
+            <p class="card-text">This law is a part of Israel's basic laws, meant to protect each person’s dignity, liberty and basic human rights. </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        
+
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">The freedom of occupation law</h5>
+            <p class="card-text">This law is a part of Israel's basic laws, meant to protect each person's freedom of occuation. </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        
+
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">The human dignity and liberty law</h5>
+            <p class="card-text">This law is a part of Israel's basic laws, meant to protect each person’s dignity, liberty and basic human rights. </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        
+      
+
+      
+
+  </div>  
+  </section>
+
+   <!-- About Section -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
       <!-- About Section Content -->
-      {%for law in laws %}
       <div class="row">
-      	<h1>{{law.law_title}}</h1>
         <div class="col-lg-4 ml-auto">
-          <p class="lead">{{law.contents}}</p>
+          <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
         </div>
       </div>
-      {% endfor %}
-    
+
+      <!-- About Section Button -->
+      <div class="text-center mt-4">
+        <a class="btn btn-xl btn-outline-light" href="#contact">
+          
+          Contact Us
+        </a>
+      </div>
+
+    </div>
   </section>
 
   <!-- Contact Section -->
@@ -211,9 +286,16 @@
 
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">2215 John Daniel Drive
-            <br>Clark, MO 65243</p>
+          <h4 class="text-uppercase mb-4">Our Team</h4>
+            <p class="lead mb-0">Product Manager: Wajeeh</p>
+
+            <p class="lead mb-0">UXer: George</p>
+
+            <p class="lead mb-0">Designer: Maya</p>
+            
+            <p class="lead mb-0">Developers: Aviv & Or</p>
+
+
         </div>
 
         <!-- Footer Social Icons -->
@@ -235,9 +317,9 @@
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
-          <h4 class="text-uppercase mb-4">About Freelancer</h4>
-          <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+          <h4 class="text-uppercase mb-4">MEET</h4>
+          <p class="lead mb-0"> A part of the Middle East Entrepreneurs of Tommorow </p>
+
         </div>
 
       </div>
@@ -257,6 +339,7 @@
       <i class="fa fa-chevron-up"></i>
     </a>
   </div>
+
 
   <!-- Portfolio Modals -->
 
